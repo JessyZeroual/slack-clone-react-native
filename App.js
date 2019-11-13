@@ -1,24 +1,25 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+import * as React from 'react';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createAppContainer } from 'react-navigation';
+import Home from './components/Home';
+import Profile from './components/Profile';
 
-export default function App() {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
+const navigator = createDrawerNavigator(
+  {
+    Home,
+    Profile,
+  },
+  {
+    // drawerType: 'back',
+    // drawerPosition: 'right',
+    // drawerWidth: 200,
+    // drawerBackgroundColor: 'orange',
+  }
+);
 
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Button
-        name="addArticle"
-        title="Ajouter un article"
-        onPress={() => Alert.alert('Touché')}
-      />
-    </View>
-  );
-}
+const AppContainer = createAppContainer(navigator);
+
+const App = () => {
+  return <AppContainer />;
+};
+export default App;

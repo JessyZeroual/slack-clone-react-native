@@ -1,20 +1,21 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { CheckBox } from 'react-native';
-import App from './App';
+// import React from 'react';
+// import renderer from 'react-test-renderer';
+// import { View, Button } from 'react-native';
 
-describe('App component', () => {
-  it('renders View', () => {
-    const component = renderer.create(<App />);
-    const instance = component.root;
-    expect(instance.findByType(CheckBox)).toBeTruthy();
-  });
-});
+// import App from './App';
 
-// describe('within View', () => {
-//   it('renders Button with text "Show alert"', () => {
+// describe('App component', () => {
+//   it('renders View', () => {
 //     const component = renderer.create(<App />);
 //     const instance = component.root;
-//     expect(instance.findByType(Button)).toBeTruthy();
+//     expect(instance.findByType(View)).toBeTruthy();
+//   });
+
+//   describe('within View', () => {
+//     it('renders Button with text "Show alert"', () => {
+//       const component = renderer.create(<App />);
+//       const instance = component.root;
+//       expect(instance.findByType(Button).props.title).toBe('Show alert');
+//     });
 //   });
 // });
