@@ -10,10 +10,14 @@ const navigator = createDrawerNavigator(
     Profile,
   },
   {
-    // drawerType: 'back',
-    // drawerPosition: 'right',
-    // drawerWidth: 200,
-    // drawerBackgroundColor: 'orange',
+    contentOptions: {
+      activeTintColor: '#FFF',
+      inactiveTintColor: '#FFF',
+      itemsContainerStyle: {
+        marginVertical: 0,
+      },
+    },
+    drawerBackgroundColor: '#3f0f40',
   }
 );
 
