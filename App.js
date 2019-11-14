@@ -16,6 +16,9 @@ const navigator = createDrawerNavigator(
       itemsContainerStyle: {
         marginVertical: 0,
       },
+      iconContainerStyle: {
+        opacity: 1,
+      },
     },
     drawerBackgroundColor: '#3f0f40',
   }
