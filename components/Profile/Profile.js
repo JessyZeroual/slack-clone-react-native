@@ -2,15 +2,19 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from 'react-native';
 import { Container } from './Profile.styled';
+import TopBar from '../TopBar/TopBar';
 
 const Profile = () => {
   Profile.navigationOptions = {
     title: 'Profile',
   };
   return (
-    <Container>
-      <Text>Profile</Text>
-    </Container>
+    <>
+      <TopBar />
+      <Container>
+        <Text>Profile</Text>
+      </Container>
+    </>
   );
 };
 export default Profile;
