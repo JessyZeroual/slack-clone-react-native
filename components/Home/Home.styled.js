@@ -7,3 +7,8 @@ export const Container = styled.View`
   background-color: #fff;
   padding: 8px;
 `;
+
+export const Logo = styled.Image`
+  height: 24px;
+  width: 24px;
+`;
