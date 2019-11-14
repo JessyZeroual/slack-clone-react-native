@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { Text } from 'react-native';
-// import { Ionicons } from '@expo/vector-icons';
-import PropTypes from 'prop-types';
+
 import { Container, Logo } from './Home.styled';
+import TopBar from '../TopBar/TopBar';
 
 const Home = () => {
   Home.navigationOptions = {
@@ -12,17 +12,13 @@ const Home = () => {
   };
 
   return (
-    <Container>
-      <Text>HomePage</Text>
-    </Container>
+    <>
+      <TopBar />
+      <Container>
+        <Text>HomePage</Text>
+      </Container>
+    </>
   );
 };
 
 export default Home;
-
-Home.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired,
-    toggleDrawer: PropTypes.func.isRequired,
-  }).isRequired,
-};
