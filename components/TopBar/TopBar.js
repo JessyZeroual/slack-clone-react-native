@@ -1,24 +1,27 @@
 import React, { useContext } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { NavigationContext } from 'react-navigation';
+import PropTypes from 'prop-types';
 
 import { TopBarWrapper, StyledIcon, Text, Span } from './TopBar.styled';
 
-const TopBar = () => {
+const TopBar = ({ channelName }) => {
   const navigation = useContext(NavigationContext);
   return (
     <TopBarWrapper>
-      <TouchableOpacity onPress={() => navigation.openDrawer()}>
+      <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
         <StyledIcon name="bars" />
       </TouchableOpacity>
-      {/* If there are props display => */}
       <Text>
         <Span>#</Span>
-        props.channel.name
+        {channelName}
       </Text>
-      {/* Else display BrandLogo => */}
     </TopBarWrapper>
   );
+};
+
+TopBar.propTypes = {
+  channelName: PropTypes.string.isRequired,
 };
 
 export default TopBar;
