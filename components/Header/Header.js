@@ -3,25 +3,22 @@ import { TouchableOpacity } from 'react-native';
 import { NavigationContext } from 'react-navigation';
 import PropTypes from 'prop-types';
 
-import { TopBarWrapper, StyledIcon, Text, Span } from './TopBar.styled';
+import { HeaderWrapper, StyledIcon, Text } from './Header.styled';
 
-const TopBar = ({ channelName }) => {
+const Header = ({ channelName }) => {
   const navigation = useContext(NavigationContext);
   return (
-    <TopBarWrapper>
+    <HeaderWrapper>
       <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
         <StyledIcon name="bars" />
       </TouchableOpacity>
-      <Text>
-        <Span>#</Span>
-        {channelName}
-      </Text>
-    </TopBarWrapper>
+      <Text>{`#${channelName}`}</Text>
+    </HeaderWrapper>
   );
 };
 
-TopBar.propTypes = {
+Header.propTypes = {
   channelName: PropTypes.string.isRequired,
 };
 
-export default TopBar;
+export default Header;

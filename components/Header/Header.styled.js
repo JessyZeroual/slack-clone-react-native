@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 // eslint-disable-next-line import/prefer-default-export
-export const TopBarWrapper = styled.View`
+export const HeaderWrapper = styled.View`
   height: 70px;
   flex-direction: row;
   justify-content: flex-start;
@@ -22,9 +22,4 @@ export const Text = styled.Text`
   font-size: 18px;
   font-weight: bold;
   padding: 10px;
-`;
-
-export const Span = styled.Text`
-  display: flex;
-  color: #383838;
 `;

@@ -4,6 +4,7 @@ import channels from '../../data/channels';
 import Channel from '../Channel/Channel';
 
 const DrawerNavigator = createDrawerNavigator(
+  // TODO: request channels
   channels.map(channel => {
     return {
       screen: () => (
